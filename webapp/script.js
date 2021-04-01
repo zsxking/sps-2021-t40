@@ -26,3 +26,21 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+async function showRandomPhrase(){
+    const responseFromServer = await fetch('/phrases');
+    const phrases = await responseFromServer.json();
+
+    const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];           
+    const phraseListElement = document.getElementById('random-phrase-container');
+    phraseListElement.innerHTML = randomPhrase;
+
+    phraseListElement.appendChild(
+        createListElement('Random phrase in English is: ' + randomPhrase));
+}
+
+function createListElement(text){
+    const liElement = document.createElement('li');
+    liElement.innerText = text;
+    return liElement
+}
