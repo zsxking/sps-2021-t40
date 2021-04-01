@@ -7,3 +7,9 @@
 #greeting-container {
   margin-top: 20px;
 }
+#lang {
+        display: block;
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+
