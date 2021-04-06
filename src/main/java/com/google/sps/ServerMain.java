@@ -24,6 +24,7 @@ public class ServerMain {
 
     // Load static content from inside the jar file.
     URL webAppDir = ServerMain.class.getClassLoader().getResource("META-INF/resources");
+    System.out.println(webAppDir);
     webAppContext.setResourceBase(webAppDir.toURI().toString());
 
     // Enable annotations so the server sees classes annotated with @WebServlet.

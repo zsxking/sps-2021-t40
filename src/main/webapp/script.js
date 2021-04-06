@@ -26,6 +26,7 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+<<<<<<< HEAD
 
 async function showRandomPhrase(){
     const responseFromServer = await fetch('/phrases');
@@ -44,3 +45,24 @@ function createListElement(text){
     liElement.innerText = text;
     return liElement
 }
+=======
+function requestTranslation() {
+        const phrase = document.getElementById('text').value;
+        const lang = document.getElementById('lang').value;
+
+        const resultContainer = document.getElementById('result');
+        resultContainer.innerText = 'Loading...';
+
+        const params = new URLSearchParams();
+        params.append('text', phrase);
+        params.append('languageCode', lang);
+
+        fetch('/translate', {
+          method: 'POST',
+          body: params
+        }).then(response => response.text())
+        .then((translatedMessage) => {
+          resultContainer.innerText = translatedMessage;
+        });
+      }
+>>>>>>> b3ab97521ba5ba25cf3405d53a0769d53e0ce3f5
