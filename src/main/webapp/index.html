@@ -2,18 +2,25 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Translation Project</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
   <body>
     <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+      <h1>Welcome to Translation</h1>
+      <p>Welcome to the translation page. Type a phrase and select a language you want to translate in.Click the translate button once finished.</p>
+      <textarea id="text"></textarea>
+    <select id="language">
+      <option value="es">English</option>
+      <option value="zh">Chinese</option>
+      <option value="es">Spanish</option>
+      <option value="hi">Hindi</option>
+      <option value="ar">Arabic</option>
+    </select>
+      <p>Click here to translate the text:</p>
+      <button onclick="requestTranslation()">Translate</button>
+      <div id="result"></div>
     </div>
   </body>
 </html>
