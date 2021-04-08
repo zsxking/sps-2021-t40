@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Random;
 
 @WebServlet("/phrase")
 public class PhraseServlet extends HttpServlet {
@@ -21,19 +22,27 @@ public class PhraseServlet extends HttpServlet {
     public void doGet(final HttpServletRequest request, final HttpServletResponse response)
             throws IOException {
 
-        // Get the request
-        String phrase = request.getParameter("phrase");
-        String lang = request.getParameter("lang");
+         //hardcoded arraylist of english phrases 
+        final ArrayList<String> engPhrases = new ArrayList<String>();
+        engPhrases.add("Hello");
+        engPhrases.add("Good morning");
+        engPhrases.add("Good evening");
+        engPhrases.add("How are you?");
+        engPhrases.add("I am doing great");
+        engPhrases.add("Thank you");
+        engPhrases.add("You are welcome");
 
-        // Do the translation
-        final Translate translate = TranslateOptions.getDefaultInstance().getService();
-        final Translation translation = translate.translate(phrase,
-                Translate.TranslateOption.targetLanguage((lang)));
-         String translatedText = ((Translation) translation).getTranslatedText();
-         //Output the translation 
-        
-         response.setContentType("application/json;charset=UTF-8");
-         response.setCharacterEncoding("UTF-8");
-         response.getWriter().println(translatedText);
+        //randomPhrase = engPhrases[Math.floor(Math.random() * engPhrases.length)];
+        //randomPhrase = engPhrases.get(rand.nextString(engPhrases.size()));
+        Random rand = new Random();
+        String randomPhrase = engPhrases.get(rand.nextInt(engPhrases.size())); //nextString
+
+        final Gson gson = new Gson();
+        final String json = gson.toJson(randomPhrase); // randomPhrase
+
+        response.setContentType("text/html;");
+        response.getWriter().println(json);
+
+        // for request (up top) use the random phrase  
     }
 }
