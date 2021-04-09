@@ -33,12 +33,13 @@ public class PhraseServlet extends HttpServlet {
         engPhrases.add("You are welcome");
 
         //randomPhrase = engPhrases[Math.floor(Math.random() * engPhrases.length)];
-        //randomPhrase = engPhrases.get(rand.nextString(engPhrases.size()));
-        Random rand = new Random();
-        String randomPhrase = engPhrases.get(rand.nextInt(engPhrases.size())); //nextString
+       //Random rand = new Random();
+       //int index = new java.util.Random().nextInt(engPhrases.size());
+       //String randomPhrase = engPhrases.get(index);
+       //String randomPhrase = engPhrases.get(rand.nextInt(engPhrases.size())); //nextString
 
         final Gson gson = new Gson();
-        final String json = gson.toJson(randomPhrase); // randomPhrase
+        final String json = gson.toJson(engPhrases); // randomPhrase
 
         response.setContentType("text/html;");
         response.getWriter().println(json);

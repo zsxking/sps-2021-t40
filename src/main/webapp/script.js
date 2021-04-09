@@ -37,8 +37,8 @@ function addRandomGreeting() {
     const phraseListElement = document.getElementById('random-phrase-container');
     phraseListElement.innerHTML = randomPhrase;
 
-    phraseListElement.appendChild(
-        createListElement("Random phrase in English is: " + randomPhrase));
+    //phraseListElement.appendChild(
+    //  createListElement("Random phrase in English is: " + randomPhrase));
 }
 
 function createListElement(text){
