@@ -9,6 +9,9 @@
   <body>
     <div id="content">
       <h1>Welcome to Translation</h1>
+      <button onclick="showPhrase();">Click here for a random English Phrase</button>
+      <p id="random-phrase-container"></p>
+
       <p>Welcome to the translation page. Type a phrase and select a language you want to translate in.Click the translate button once finished.</p>
       <textarea id="text"></textarea>
     <select id="language">
@@ -19,7 +22,7 @@
       <option value="ar">Arabic</option>
     </select>
       <p>Click here to translate the text:</p>
-      <button onclick="requestTranslation()">Translate</button>
+      <button onclick="requestTranslation();">Translate</button>
       <div id="result"></div>
     </div>
   </body>
