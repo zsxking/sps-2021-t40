@@ -55,7 +55,7 @@ function requestTranslation() {
         resultContainer.innerText = 'Loading...';
 
         const params = new URLSearchParams();
-        params.append('text', phrase);
+        params.append('phrase', phrase);
         params.append('lang', lang);
 
         fetch('/translate', {

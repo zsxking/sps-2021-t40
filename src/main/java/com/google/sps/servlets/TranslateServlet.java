@@ -22,16 +22,19 @@ public class TranslateServlet extends HttpServlet {
             throws IOException {
 
         // Get the request
-        String phrase = request.getParameter("phrase");
+        String phrase = request.getParameter("text");
         String lang = request.getParameter("lang");
 
         // Do the translation
         final Translate translate = TranslateOptions.getDefaultInstance().getService();
+        System.out.println(translate);
+        System.out.println(phrase);
+        System.out.println(lang);
         final Translation translation = translate.translate(phrase,
-                Translate.TranslateOption.targetLanguage((lang)));
+                Translate.TranslateOption.targetLanguage(lang));
+        
          String translatedText = ((Translation) translation).getTranslatedText();
          //Output the translation 
-        
          response.setContentType("application/json;charset=UTF-8");
          response.setCharacterEncoding("UTF-8");
          response.getWriter().println(translatedText);

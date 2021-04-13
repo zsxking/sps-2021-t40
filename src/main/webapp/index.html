@@ -5,14 +5,15 @@
     <title>Translation Project</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="TranslateServlet.java"></script>
+    <script src="PhraseServlet.java"></script>
   </head>
   <body>
     <div id="content">
       <h1>Welcome to Translation</h1>
+      <h2>Welcome to the translation page. Type a phrase and select a language you want to translate in.Click the translate button once finished.</h2>
       <button onclick="showPhrase();">Click here for a random English Phrase</button>
       <p id="random-phrase-container"></p>
-
-      <p>Welcome to the translation page. Type a phrase and select a language you want to translate in.Click the translate button once finished.</p>
       <textarea id="text"></textarea>
     <select id="language">
       <option value="es">English</option>
