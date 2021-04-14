@@ -16,11 +16,12 @@
     margin-bottom: 25px;
       }
 button {
-  background-color: #008CBA;
+  background-color: #d5f4e6;
   border: none;
-  color: white;
+  color: black;
   padding: 15px 32px;
   text-align: center;
+  font-family: 'Oxygen', sans-serif;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -28,15 +29,59 @@ button {
   cursor: pointer;
 }
 h1{
-    text-align: center;
+    font-family: 'Chewy', cursive;
+    text-align: left;
     font-size: 30px;
     color: black;
 }
 h2{
+    font-family: 'Oxygen', sans-serif;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     color:black;
 }
+body{
+    background:#80ced6;
+}
+p{
+    font-family: 'Oxygen', sans-serif;
+    text-align: left;
+    font-size: 15px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fefbd8;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
+li a:hover:not(.active) {
+  background-color: #618685;
+}
 
-
+.active {
+  background-color: #fefbd8;
+}
+title{
+     font-family: 'Chewy', cursive;
+     text-align: center;
+}
+.img-circle {
+border-radius: 50%;
+border: 3px solid black;
+height: 200px;
+width: 200px;
+margin-bottom: 20px;
+margin-left: 20px;
+}
