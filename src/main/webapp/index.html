@@ -4,11 +4,42 @@
     <meta charset="UTF-8">
     <title>Translation Project</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aboutus.html">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
     <script src="TranslateServlet.java"></script>
     <script src="PhraseServlet.java"></script>
+    
+    <style>@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');</style>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+</style>
+
   </head>
   <body>
+      <div id="div1" class="fa"></div>
+      <script>
+function smile() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "&#xf118;";
+  setTimeout(function () {
+      a.innerHTML = "&#xf11a;";
+    }, 1000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf119;";
+    }, 2000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf11a;";
+    }, 3000);
+}
+smile();
+setInterval(smile, 4000);
+</script>
+<ul>
+  <li><a class="active" href="#index.html">Home</a></li>
+  <li><a href="aboutus.html">Meet the Team</a></li>
+  <li><a href="projectinfo.html">About this Project</a></li>
+</ul>
     <div id="content">
       <h1>Welcome to Translation</h1>
       <h2>Welcome to the translation page. Type a phrase and select a language you want to translate in.Click the translate button once finished.</h2>
